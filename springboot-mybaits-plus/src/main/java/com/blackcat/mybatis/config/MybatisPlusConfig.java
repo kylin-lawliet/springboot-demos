@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
  * LogicSqlInjector  在 mybatisplus 3.0.1 中
  */
 @Configuration
-@MapperScan("com.blackcat.com.blackcat.mybatis.mapper")//这个注解，作用相当于下面的@Bean MapperScannerConfigurer，2者配置1份即可
+@MapperScan("com.blackcat.mybatis.mapper")//这个注解，作用相当于下面的@Bean MapperScannerConfigurer，2者配置1份即可
 public class MybatisPlusConfig {
 
 }
