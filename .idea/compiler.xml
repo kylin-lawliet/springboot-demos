@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-mybaits-plus" />
+        <module name="springboot-mybatis-plus2" />
         <module name="springboot-shiro" />
         <module name="springboot-shiro2" />
         <module name="springboot-solr" />
@@ -17,6 +18,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="springboot-mybaits-plus" options="-parameters" />
+      <module name="springboot-mybatis-plus2" options="-parameters" />
       <module name="springboot-shiro" options="-parameters" />
       <module name="springboot-shiro2" options="-parameters" />
       <module name="springboot-solr" options="-parameters" />
