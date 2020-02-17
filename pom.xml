@@ -11,6 +11,7 @@
         <module>springboot-shiro2</module>
         <module>springboot-mybaits-plus</module>
         <module>springboot-mybatis-plus2</module>
+        <module>springboot-mybatis-plus-generator</module>
     </modules>
     <!-- 项目说明：这里作为聚合工程的父工程 -->
     <groupId>com.example</groupId>
