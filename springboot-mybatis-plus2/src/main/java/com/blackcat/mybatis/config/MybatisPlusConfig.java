@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * @date : 2020/1/26 11:30
  */
 @Component
-@MapperScan("com.blackcat.com.blackcat.mybatis.mapper") //扫描Mapper
+@MapperScan("com.blackcat.mybatis.mapper") //扫描Mapper
 public class MybatisPlusConfig {
 
 }
