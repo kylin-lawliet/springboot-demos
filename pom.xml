@@ -8,6 +8,7 @@
     <modules>
         <module>springboot-solr</module>
         <module>springboot-shiro</module>
+        <module>springboot-shiro2</module>
     </modules>
     <!-- 项目说明：这里作为聚合工程的父工程 -->
     <groupId>com.example</groupId>
@@ -26,7 +27,22 @@
         <java.version>1.8</java.version>
 
         <druid-spring-boot-starter.version>1.1.10</druid-spring-boot-starter.version>
+
+        <commons-lang3.version>3.5</commons-lang3.version>
+        <spring-boot-test.version>1.4.2.RELEASE</spring-boot-test.version>
+
         <shiro-spring.version>1.3.2</shiro-spring.version>
+        <shiro-redis.version>3.1.0</shiro-redis.version>
+        <shiro-ehcache.version>1.4.0</shiro-ehcache.version>
+        <shiro-freemarker-tags.version>0.1</shiro-freemarker-tags.version>
+
+        <mybytis-plus.version>3.3.0</mybytis-plus.version>
+        <mybatis-plus-generator.version>3.3.1</mybatis-plus-generator.version>
+        <pagehelper-spring-boot-starter.version>1.2.12</pagehelper-spring-boot-starter.version>
+        <pagehelper.version>5.1.2</pagehelper.version>
+
+        <persistence-api.version>1.0</persistence-api.version>
+        <fastjson.version>1.2.32</fastjson.version>
     </properties>
 
     <dependencyManagement>
@@ -43,6 +59,84 @@
                 <artifactId>shiro-spring</artifactId>
                 <version>${shiro-spring.version}</version>
             </dependency>
+            <!--fastjson-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <!--druid-->
+            <!--<dependency>-->
+                <!--<groupId>com.alibaba</groupId>-->
+                <!--<artifactId>druid</artifactId>-->
+                <!--<version>${druid.version}</version>-->
+            <!--</dependency>-->
+            <!--persistence-api @Entity和@Table注解-->
+            <dependency>
+                <groupId>javax.persistence</groupId>
+                <artifactId>persistence-api</artifactId>
+                <version>${persistence-api.version}</version>
+            </dependency>
+            <!-- mybatisPlus 核心库 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybytis-plus.version}</version>
+            </dependency>
+            <!--分页-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper-spring-boot-starter.version}</version>
+            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>com.github.pagehelper</groupId>-->
+                <!--<artifactId>pagehelper</artifactId>-->
+                <!--<version>${pagehelper.version}</version>-->
+            <!--</dependency>-->
+            <!-- mybatisPlus 代码生成器插件-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus-generator.version}</version>
+            </dependency>
+            <!-- StringUtilS工具 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <!--spring-boot-test-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-test</artifactId>
+                <version>${spring-boot-test.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- Shiro 核心依赖 -->
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring</artifactId>
+                <version>${shiro-spring.version}</version>
+            </dependency>
+            <!--shiro freemarker页面标签-->
+            <dependency>
+                <groupId>net.mingsoft</groupId>
+                <artifactId>shiro-freemarker-tags</artifactId>
+                <version>${shiro-freemarker-tags.version}</version>
+            </dependency>
+            <!--shiro redis-->
+            <dependency>
+                <groupId>org.crazycake</groupId>
+                <artifactId>shiro-redis</artifactId>
+                <version>${shiro-redis.version}</version>
+            </dependency>
+            <!--shiro ehcache缓存-->
+            <!--<dependency>-->
+                <!--<groupId>org.apache.shiro</groupId>-->
+                <!--<artifactId>shiro-ehcache</artifactId>-->
+                <!--<version>${shiro-ehcache.version}</version>-->
+            <!--</dependency>-->
         </dependencies>
     </dependencyManagement>
 

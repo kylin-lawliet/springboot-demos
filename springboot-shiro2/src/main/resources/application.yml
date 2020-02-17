@@ -1,0 +1,131 @@
+# Server settings
+server:
+    port: 8083
+    # HTTP请求和响应头的最大量，以字节为单位，默认值为4096字节,超过此长度的部分不予处理,一般8K。解决java.io.EOFException: null问题
+    max-http-header-size: 8192
+    # use-forward-headers: true Spring Boot 2.2中的弃用 使用下列参数
+    forward-headers-strategy: native
+    compression:
+        enabled: true
+        min-response-size: 1024
+        mime-types: text/plain,text/css,text/xml,text/javascript,application/json,application/javascript,application/xml,application/xml+rss,application/x-javascript,application/x-httpd-php,image/jpeg,image/gif,image/png
+    tomcat:
+        remote-ip-header: X-Forwarded-for
+        protocol-header: X-Forwarded-Proto
+        port-header: X-Forwarded-Port
+        uri-encoding: UTF-8
+        basedir: /var/tmp/website-app
+    #servlet:
+        #context-path: /blackcat
+# SPRING PROFILES
+spring:
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+        username: root
+        password: 111111
+    application:
+        name: blog
+    freemarker:
+        allow-request-override: false
+        allow-session-override: false
+        cache: false #缓存配置
+        charset: UTF-8 #编码格式
+        request-context-attribute: request # 访问request名称定义
+        check-template-location: true
+        content-type: text/html # 设置Content-Type
+        enabled: true
+        expose-request-attributes: false # 设定所有request的属性在merge到模板的时候，是否要都添加到model中
+        expose-session-attributes: false # 是否在merge模板的时候，将HttpSession属性都添加到model中
+        expose-spring-macro-helpers: true # 设定是否以springMacroRequestContext的形式暴露RequestContext给Spring’s macro library使用
+        prefer-file-system-access: true
+        suffix: .ftl
+        template-loader-path: classpath:/templates/ #模板加载路径 按需配置
+        settings:
+            template_update_delay: 0
+            default_encoding: UTF-8
+            classic_compatible: true #解决前台使用${}赋值值为空的情况
+    # HTTP ENCODING
+    http:
+        multipart:
+            #max-file-size: 2MB
+            #max-request-size: 10MB
+        encoding:
+            enabled: true
+            charset: UTF-8
+            force: true
+    messages:
+        encoding: UTF-8
+    jmx:
+        enabled: true
+        default-domain: agentservice
+    resources:
+        static-locations: classpath:/static/
+        chain:
+            strategy:
+                content:
+                    enabled: true
+                    paths: /**
+    # redis缓存服务配置
+    session:
+        store-type: redis
+    # Redis数据库索引（默认为0）
+    redis:
+        database: 1
+        # Redis服务器地址
+        host: 127.0.0.1
+        # Redis服务器连接端口
+        port: 6379
+        # Redis服务器连接密码（默认为空）
+        password: 111111
+        # 连接池最大连接数（使用负值表示没有限制）
+        jedis:
+            pool:
+                max-active: 1000  # 连接池最大连接数（使用负值表示没有限制）
+                max-wait: -1      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+                max-idle: 10      # 连接池中的最大空闲连接
+                min-idle: 5       # 连接池中的最小空闲连接
+        # 连接超时时间（毫秒）
+        timeout: 0
+        # 默认的数据过期时间，主要用于shiro权限管理
+        expire: 2592000
+
+# MyBatis plus
+mybatis-plus:
+    mapper-locations: classpath:/mappers/*.xml
+    #实体扫描，多个package用逗号或者分号分隔
+    typeAliasesPackage: com.blackcat.shiro.entity
+    global-config:
+        #刷新mapper 调试神器
+        db-config:
+            #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+            #idtype: 0
+            #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+            field-strategy: not_empty
+            #驼峰下划线转换
+            column-underline: true
+            #数据库大写下划线转换
+            capitalmode: true
+            #逻辑删除配置
+            logic-delete-value: 1
+            logic-not-delete-value: 0
+            db-type: mysql
+        refresh: true
+        #自定义填充策略接口实现
+        #metaobjecthandler: com.baomidou.springboot.xxx
+        #自定义SQL注入器
+        #sqlinjector: com.baomidou.mybatisplus.extension.injector.LogicSqlInjector
+        configuration:
+            # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+            log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+            map-underscore-to-camel-case: true
+            cache-enabled: false
+
+banner:
+    #charset: UTF-8
+
+#logging.level.com.blackcat.blog.core.mapper: debug
+
+################################### 程序自定义配置 ###################################
+
