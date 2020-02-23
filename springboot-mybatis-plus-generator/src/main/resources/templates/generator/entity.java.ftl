@@ -92,7 +92,7 @@ public class ${entity} implements Serializable {
     </#if>
     <#-- 日期输出格式 -->
     <#if (field.propertyType!"") == "LocalDateTime">
-        @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss")//数据库导出页面时json格式化
+        @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")//数据库导出页面时json格式化
     </#if>
     private ${field.propertyType} ${field.propertyName};
 </#list>
