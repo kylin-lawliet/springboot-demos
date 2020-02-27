@@ -93,6 +93,7 @@ public class ${table.controllerName} {
     @PostMapping("/edit")
     public ResultUtil edit(${entity} entity) {
         try {
+            entity.setUpdateTime(LocalDateTime.now());
             i${entity}Service.updateById(entity);
         } catch (Exception e) {
             e.printStackTrace();
