@@ -38,7 +38,7 @@ public class MysqlGenerator3 {
         param.put("xmlName","Mapper");// 生成的mapper.xml的文件结尾名称如UserMapper.xml
         // 设置模板 freemarker模板:/templates/xx.ftl  velocity模板:/templates/xx.vm
         //param.put("htmlTemplatePath","/templates/list.html.ftl");//
-        param.put("table","");//数据库表名，多个英文逗号分割  如果不设置就是生成所有的表
+        param.put("table","blog_code_list");//数据库表名，多个英文逗号分割  如果不设置就是生成所有的表
         //"sys_menu,sys_role,sys_role_menu,sys_user,sys_user_role"
 
         generator(param);
@@ -129,10 +129,10 @@ public class MysqlGenerator3 {
         TemplateConfig templateConfig = new TemplateConfig();
         // 配置自定义输出模板
         //指定自定义模板路径，注意不要带上.ftl/.vm, 会根据使用的模板引擎自动识别
-        templateConfig.setService("templates/generator/service.java");
-        templateConfig.setServiceImpl("templates/generator/serviceImpl.java");
-        templateConfig.setMapper("templates/generator/mapper.java");
-        templateConfig.setController("templates/generator/controller.java");
+        templateConfig.setService("templates/blog/service.java");
+        templateConfig.setServiceImpl("templates/blog/serviceImpl.java");
+        templateConfig.setMapper("templates/blog/mapper.java");
+        templateConfig.setController("templates/blog/controller.java");
         mpg.setTemplate(templateConfig);
 
         // 策略配置
