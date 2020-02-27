@@ -23,12 +23,5 @@ open class ${table.serviceImplName} : ${superServiceImplClass}<${table.mapperNam
 <#else>
 public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.mapperName}, ${entity}> implements ${table.serviceName} {
 
-    @Resource
-    private ${table.mapperName} ${table.entityPath}Mapper;
-
-    @Override
-    public void deleteBatchIds(Long[] ids) {
-        ${table.entityPath}Mapper.deleteBatchIds(Arrays.asList(ids));
-    }
 }
 </#if>

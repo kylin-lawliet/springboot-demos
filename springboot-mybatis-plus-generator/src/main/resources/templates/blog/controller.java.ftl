@@ -71,7 +71,7 @@ public class ${table.controllerName} {
         if (null == ids) {
            return ResultUtil.error(String.valueOf(ResponseStatusEnum.REMOVE_ERROR));
         }
-        i${entity}Service.deleteBatchIds(ids);
+        i${entity}Service.remove(new UpdateWrapper<${entity}>().in("id", ids));
         return ResultUtil.ok("成功删除 [" + ids.length + "] 个数据");
     }
 

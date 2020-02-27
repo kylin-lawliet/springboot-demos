@@ -16,12 +16,5 @@ interface ${table.serviceName} : ${superServiceClass}<${entity}>
 <#else>
 public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
 
-  /**
-   * <p> : 批量删除
-   * @author : blackcat
-   * @date : ${date}
-   * @param ids 主键
-   */
-  void deleteBatchIds(Long[] ids);
 }
 </#if>
