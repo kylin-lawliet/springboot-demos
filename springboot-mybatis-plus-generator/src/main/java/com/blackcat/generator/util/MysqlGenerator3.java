@@ -39,7 +39,7 @@ public class MysqlGenerator3 {
         param.put("xml","mappers");// 生成的mapper.xml包名
         param.put("model","");// 生成的mapper.xml包名下的模块名称 空则无 如:mappers.shiro
         param.put("xmlName","Mapper");// 生成的mapper.xml的文件结尾名称如UserMapper.xml
-        param.put("table","blog_article");//数据库表名，多个英文逗号分割  如果不设置就是生成所有的表
+        param.put("table","sys_options");//数据库表名，多个英文逗号分割  如果不设置就是生成所有的表
         //"sys_menu,sys_role,sys_role_menu,sys_user,sys_user_role"
 
         generator(param);
