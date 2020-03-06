@@ -1,5 +1,6 @@
 package com.blackcat.mybatis.service;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.blackcat.mybatis.entity.SysUser;
 
