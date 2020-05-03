@@ -4,6 +4,8 @@
 
 </head>
 <body>
+<#--<@shiro.guest>游客显示的信息</@shiro.guest> 自定义标签写法-->
+
 <shiro:hasPermission name="user:add"><a href="/user/add">点击添加固定用户信息(后台写死,方便测试)</a></shiro:hasPermission><br/>
 <shiro:hasPermission name="user:del"><a href="/user/del">点击删除固定用户信息(后台写死,方便测试)</a></shiro:hasPermission><br/>
 <shiro:hasPermission name="user:view"><a href="/user/view">显示此内容表示拥有查看用户列表的权限</a></shiro:hasPermission><br/>

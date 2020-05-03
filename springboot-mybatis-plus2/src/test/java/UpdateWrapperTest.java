@@ -27,6 +27,7 @@ public class UpdateWrapperTest {
         updateWrapper.set("name", "");// 数据库字段值变为空字符串
         updateWrapper.set("name", null);// 数据库字段值变为null
         updateWrapper.setSql("name = '老李头'");// name='老李头'
+        updateWrapper.setSql("age = age+1");//age=age+1
 
     }
 
