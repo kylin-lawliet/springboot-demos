@@ -24,7 +24,7 @@
 <shiro:notAuthenticated>已记住用户</shiro:notAuthenticated><br/>
 <!-- 相当于Subject.getPrincipals().oneByType(String.class) -->
 <shiro:principal type="java.lang.String"/><br/>
-<!-- 相当于((User)Subject.getPrincipals()).getUsername() -->
+<!-- 相当于((com.blackcat.redis.entity.User)Subject.getPrincipals()).getUsername() -->
 <shiro:principal property="username"/><br/>
 <!-- 如果当前Subject有角色将显示body体内容 name="角色名" -->
 <shiro:hasRole name="admin">这是admin角色</shiro:hasRole><br/>

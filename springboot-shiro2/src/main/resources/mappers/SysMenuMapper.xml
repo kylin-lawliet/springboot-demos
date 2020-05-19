@@ -3,7 +3,7 @@
 <mapper namespace="com.blackcat.shiro.mapper.SysMenuMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.blackcat.shiro.entity.SysMenu">
+    <resultMap id="BaseResultMap" type="com.blackcat.shiro.com.blackcat.redis.entity.SysMenu">
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="type" property="type" />
