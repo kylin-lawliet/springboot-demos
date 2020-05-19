@@ -3,7 +3,7 @@
 <mapper namespace="com.blackcat.mybatis.mapper.UserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.blackcat.mybatis.entity.User">
+    <resultMap id="BaseResultMap" type="com.blackcat.mybatis.com.blackcat.redis.entity.com.blackcat.redis.entity.User">
         <id column="USER_ID" property="userId"/>
         <result column="USER_NAME" property="userName"/>
     </resultMap>
