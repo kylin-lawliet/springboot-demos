@@ -32,7 +32,7 @@ public class MysqlGenerator2 {
         param.put("open","true");// 是否打开输出目录
         param.put("parent","com.blackcat.mybatis");// 顶层包结构
         param.put("mapper","mapper");// 生成的mapper包名
-        param.put("entity","entity");// 生成的entity包名
+        param.put("entity","com.blackcat.redis.entity");// 生成的entity包名
         param.put("service","service");// 生成的service包名
         param.put("serviceImpl","service.impl");// 生成的serviceImpl包名
         param.put("xml","mappers");// 生成的mapper.xml包名
@@ -84,7 +84,7 @@ public class MysqlGenerator2 {
         }
         pc.setParent(param.get("parent"));
         pc.setMapper(param.get("mapper"));
-        pc.setEntity(param.get("entity"));
+        pc.setEntity(param.get("com.blackcat.redis.entity"));
         pc.setService(param.get("service"));
         pc.setServiceImpl(param.get("serviceImpl"));
         pc.setXml(param.get("xml"));

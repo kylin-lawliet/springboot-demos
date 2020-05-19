@@ -59,7 +59,7 @@ public class MysqlGenerator {
         //pc.setModuleName(scanner("模块名"));
         pc.setParent("com.blackcat.generator");
         pc.setMapper("mapper");
-        pc.setEntity("entity");
+        pc.setEntity("com.blackcat.redis.entity");
         pc.setService("service");
         pc.setServiceImpl("service.impl");
         pc.setXml("mappers");

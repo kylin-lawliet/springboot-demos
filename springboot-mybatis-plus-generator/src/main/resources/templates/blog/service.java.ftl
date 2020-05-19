@@ -1,6 +1,6 @@
 package ${package.Service};
 
-import ${package.Entity}.${entity};
+import ${package.Entity}.${com.blackcat.redis.entity};
 import ${superServiceClassPackage};
 import ${cfg.projectPath}.vo.BaseConditionVO;
 import com.github.pagehelper.PageInfo;
@@ -12,9 +12,9 @@ import java.util.List;
  * @date ${date}
  */
 <#if kotlin>
-interface ${table.serviceName} : ${superServiceClass}<${entity}>
+interface ${table.serviceName} : ${superServiceClass}<${com.blackcat.redis.entity}>
 <#else>
-public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
+public interface ${table.serviceName} extends ${superServiceClass}<${com.blackcat.redis.entity}> {
 
 }
 </#if>

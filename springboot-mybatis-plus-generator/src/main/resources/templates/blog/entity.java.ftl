@@ -34,14 +34,14 @@ import lombok.experimental.Accessors;
 @TableName("${table.name}")
 </#if>
 <#if swagger2>
-@ApiModel(value="${entity}对象", description="${table.comment!}")
+@ApiModel(value="${com.blackcat.redis.entity}对象", description="${table.comment!}")
 </#if>
 <#if superEntityClass??>
-public class ${entity} extends ${superEntityClass}<#if activeRecord><${entity}></#if> {
+public class ${com.blackcat.redis.entity} extends ${superEntityClass}<#if activeRecord><${com.blackcat.redis.entity}></#if> {
 <#elseif activeRecord>
-public class ${entity} extends Model<${entity}> {
+public class ${com.blackcat.redis.entity} extends Model<${com.blackcat.redis.entity}> {
 <#else>
-public class ${entity} implements Serializable {
+public class ${com.blackcat.redis.entity} implements Serializable {
 </#if>
 
 <#if entitySerialVersionUID>
@@ -106,7 +106,7 @@ public class ${entity} implements Serializable {
     }
 
     <#if entityBuilderModel>
-    public ${entity} set${field.capitalName}(${field.propertyType} ${field.propertyName}) {
+    public ${com.blackcat.redis.entity} set${field.capitalName}(${field.propertyType} ${field.propertyName}) {
     <#else>
     public void set${field.capitalName}(${field.propertyType} ${field.propertyName}) {
     </#if>
@@ -138,7 +138,7 @@ public class ${entity} implements Serializable {
 <#if !entityLombokModel>
     @Override
     public String toString() {
-        return "${entity}{" +
+        return "${com.blackcat.redis.entity}{" +
     <#list table.fields as field>
         <#if field_index==0>
             "${field.propertyName}=" + ${field.propertyName} +
