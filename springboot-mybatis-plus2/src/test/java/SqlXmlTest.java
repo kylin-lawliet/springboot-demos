@@ -27,7 +27,7 @@ public class SqlXmlTest {
             private List<BlogCode> nodes;
         }*/
 
-    /*<resultMap id="BaseResultMap" type="com.blackcat.blog.core.entity.BlogCode">
+    /*<resultMap id="BaseResultMap" type="com.blackcat.blog.core.com.blackcat.redis.entity.BlogCode">
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="parent_id" property="parentId" />
@@ -37,14 +37,14 @@ public class SqlXmlTest {
         <result column="create_time" property="createTime" />
         <result column="update_time" property="updateTime" />
         父级关联
-        <association property="parent" javaType="com.blackcat.blog.core.entity.BlogCode">
+        <association property="parent" javaType="com.blackcat.blog.core.com.blackcat.redis.entity.BlogCode">
             <id column="id" property="id" />
             <result column="name" property="name" />
             <result column="parent_id" property="parentId" />
             <result column="remarks" property="remarks" />
         </association>
         一对多关联
-        <collection property="nodes" column="node_id" javaType="ArrayList" ofType="com.blackcat.blog.core.entity.BlogCode">
+        <collection property="nodes" column="node_id" javaType="ArrayList" ofType="com.blackcat.blog.core.com.blackcat.redis.entity.BlogCode">
             <id column="node_id" property="id" />
             <result column="node_name" property="name" />
             <result column="node_parent_id" property="parentId" />

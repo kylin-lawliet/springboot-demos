@@ -3,7 +3,7 @@
 <mapper namespace="com.blackcat.mybatis.mapper.SysMenuMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.blackcat.mybatis.entity.SysMenu">
+    <resultMap id="BaseResultMap" type="com.blackcat.mybatis.com.blackcat.redis.entity.SysMenu">
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="type" property="type" />
@@ -16,7 +16,7 @@
         <result column="icon" property="icon" />
         <result column="create_time" property="createTime" />
         <result column="update_time" property="updateTime" />
-        <association property="parent" javaType="com.blackcat.mybatis.entity.SysMenu">
+        <association property="parent" javaType="com.blackcat.mybatis.com.blackcat.redis.entity.SysMenu">
             <result property="id" jdbcType="BIGINT" column="parent_id"/>
             <result property="name" jdbcType="VARCHAR" column="parent_name"/>
             <result property="type" jdbcType="VARCHAR" column="parent_type"/>
@@ -26,7 +26,7 @@
             <result property="available" jdbcType="BIT" column="parent_available"/>
             <result property="icon" jdbcType="VARCHAR" column="parent_icon"/>
         </association>
-        <collection property="nodes" column="node_id" javaType="ArrayList" ofType="com.blackcat.mybatis.entity.SysMenu">
+        <collection property="nodes" column="node_id" javaType="ArrayList" ofType="com.blackcat.mybatis.com.blackcat.redis.entity.SysMenu">
             <result property="id" jdbcType="BIGINT" column="node_id"/>
             <result property="name" jdbcType="VARCHAR" column="node_name"/>
             <result property="type" jdbcType="VARCHAR" column="node_type"/>

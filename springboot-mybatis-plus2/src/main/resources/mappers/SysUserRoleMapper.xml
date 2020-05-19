@@ -3,7 +3,7 @@
 <mapper namespace="com.blackcat.mybatis.mapper.SysUserRoleMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.blackcat.mybatis.entity.SysUserRole">
+    <resultMap id="BaseResultMap" type="com.blackcat.mybatis.com.blackcat.redis.entity.SysUserRole">
         <id column="id" property="id" />
         <result column="user_id" property="userId" />
         <result column="role_id" property="roleId" />

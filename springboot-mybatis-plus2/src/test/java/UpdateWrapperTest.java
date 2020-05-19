@@ -50,7 +50,7 @@ public class UpdateWrapperTest {
 
     /**
      * <p> 描述 : 根据 UpdateWrapper 条件，更新记录
-     * - - - entity 实体对象 (set 值,不能为 null)
+     * - - - com.blackcat.redis.entity 实体对象 (set 值,不能为 null)
      * - - - updateWrapper 修改查询条件
      * @author : blackcat
      * @date  : 2020/3/6 13:52
