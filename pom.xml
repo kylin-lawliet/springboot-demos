@@ -13,6 +13,8 @@
         <module>springboot-mybatis-plus2</module>
         <module>springboot-mybatis-plus-generator</module>
         <module>springboot-bootstrap</module>
+        <module>springboot-redis-stringredistemplate</module>
+        <module>springboot-redis-redistemple</module>
     </modules>
     <!-- 项目说明：这里作为聚合工程的父工程 -->
     <groupId>com.example</groupId>
@@ -145,6 +147,16 @@
     </dependencyManagement>
 
     <dependencies>
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!-- fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
         <!--test-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -156,11 +168,6 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-test</artifactId>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 

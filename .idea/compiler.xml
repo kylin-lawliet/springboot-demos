@@ -11,18 +11,30 @@
         <module name="springboot-mybaits-plus" />
         <module name="springboot-mybatis-plus-generator" />
         <module name="springboot-mybatis-plus2" />
+        <module name="springboot-redis-redistemple" />
+        <module name="springboot-redis-stringredistemplate" />
         <module name="springboot-shiro" />
         <module name="springboot-shiro2" />
         <module name="springboot-solr" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springboot-junit5" target="1.8" />
+      <module name="springboot-redis" target="1.8" />
+      <module name="springboot-redis-redistemplate" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="springboot-bootstrap" options="-parameters" />
+      <module name="springboot-junit5" options="-parameters" />
       <module name="springboot-mybaits-plus" options="-parameters" />
       <module name="springboot-mybatis-plus-generator" options="-parameters" />
       <module name="springboot-mybatis-plus2" options="-parameters" />
+      <module name="springboot-redis" options="-parameters" />
+      <module name="springboot-redis-redistemplate" options="-parameters" />
+      <module name="springboot-redis-redistemple" options="-parameters" />
+      <module name="springboot-redis-stringredistemplate" options="-parameters" />
       <module name="springboot-shiro" options="-parameters" />
       <module name="springboot-shiro2" options="-parameters" />
       <module name="springboot-solr" options="-parameters" />
