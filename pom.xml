@@ -48,7 +48,7 @@
         <pagehelper.version>5.1.2</pagehelper.version>
 
         <persistence-api.version>1.0</persistence-api.version>
-        <fastjson.version>1.2.32</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
     </properties>
 
     <dependencyManagement>
